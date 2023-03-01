@@ -63,6 +63,9 @@ var ad_idzone = "3154154",
 		
 		$('unblocker-form').onsubmit = function(){
 			var url = $('url').value;
+			if (url.includes(".")==false){
+				url="https://www.google.com/search?q="+url;
+			}
 			if(url.substr(0,4) != "http"){
 				url = "http://" + url;
 			}
