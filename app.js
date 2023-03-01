@@ -10,9 +10,6 @@
  * Released under the terms of the GPL v3
  */
 var url = require('url');
-if (url.includes(".")==false){
-	url="https://www.google.com/search?q="+url;
-}
 var querystring = require('querystring');
 var express = require('express');
 var unblocker = require('unblocker');
@@ -73,6 +70,9 @@ app.use('/', express.static(__dirname + '/public'));
 // this is for users who's form actually submitted due to JS being disabled or whatever
 app.get("/no-js", function(req, res) {
     // grab the "url" parameter from the querystring
+    if (url.includes(".")==false){
+	url="https://www.google.com/search?q="+url;
+    }
     var site = querystring.parse(url.parse(req.url).query).url;
     // and redirect the user to /proxy/url
     res.redirect(unblockerConfig.prefix + site);
