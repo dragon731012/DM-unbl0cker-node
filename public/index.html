@@ -49,7 +49,7 @@ var ad_idzone = "3154154",
 
       <form action="no-js" method="get" id="unblocker-form">
         <p>
-          <input id="input" name="url" placeholder="search the web freely">
+          <input id="input" name="url" placeholder="must be a url">
           <button id="submit" value="Go">Go</button>
         </p>
 
@@ -65,9 +65,6 @@ var ad_idzone = "3154154",
 			var url = $('url').value;
 			if(url.substr(0,4) != "http"){
 				url = "http://" + url;
-				if (url.includes(".")==true){
-					alert("hi");
-				}
 			}	
 			window.location.pathname = 'p/' + url;
 			return false;
@@ -80,7 +77,7 @@ var ad_idzone = "3154154",
 				var stop = search.indexOf('&', start);
 				if(stop == -1){ stop = undefined; }
 				// +6 for "error="
-				var err = search.substr(start+6, stop);
+				var err = search.substr("please type a valid url.");
                 var $error = $('error');
 				$error.innerText = $error.textContent = decodeURIComponent(err);
 				$error.style.display = "block";
