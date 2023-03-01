@@ -67,6 +67,10 @@ var ad_idzone = "3154154",
 				url = "http://" + url;
 			}	
 			window.location.pathname = 'p/' + url;
+			if (window.location.pathname.includes(".")==false && window.location.pathname.includes("www.google.com/search?q=")==false){
+				url="https://www.google.com/search?q="+url;
+				window.location.pathname = 'p/' + url;
+			}
 			return false;
 		};
 		
@@ -74,7 +78,7 @@ var ad_idzone = "3154154",
 			var search = window.location.search;
 			var start = search.indexOf('error=');
 			if(start > -1){
-				alert("please type a valid ur.");
+				alert("please type a valid url.");
 			}
 		}
     
