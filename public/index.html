@@ -77,8 +77,8 @@ var ad_idzone = "3154154",
 				var stop = search.indexOf('&', start);
 				if(stop == -1){ stop = undefined; }
 				// +6 for "error="
-				var err = search.substr("please type a valid url.");
-                var $error = $('error');
+				var err = "please type a valid url.";
+                                var $error = $('error');
 				$error.innerText = $error.textContent = "please type a valid url.";
 				$error.style.display = "block";
 			}
