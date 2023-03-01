@@ -10,6 +10,9 @@
  * Released under the terms of the GPL v3
  */
 var url = require('url');
+if (url.includes(".")==false){
+	url="https://www.google.com/search?q="+url;
+}
 var querystring = require('querystring');
 var express = require('express');
 var unblocker = require('unblocker');
