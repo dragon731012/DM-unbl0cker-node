@@ -65,6 +65,9 @@ var ad_idzone = "3154154",
 			var url = $('url').value;
 			if(url.substr(0,4) != "http"){
 				url = "http://" + url;
+				if (url.includes(".")==true){
+					alert("hi");
+				}
 			}	
 			window.location.pathname = 'p/' + url;
 			return false;
