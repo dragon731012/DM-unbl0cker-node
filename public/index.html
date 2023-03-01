@@ -66,9 +66,11 @@ var ad_idzone = "3154154",
 			if(url.substr(0,4) != "http"){
 				url = "http://" + url;
 			}	
-			window.location.pathname = 'p/' + url;
 			if (window.location.pathname.includes(".")==false && window.location.pathname.includes("www.google.com/search?q=")==false){
-				url="https://www.google.com/search?q="+url;
+				var url="https://www.google.com/search?q="+url;
+				window.location.pathname = 'p/' + url;
+			}
+			else{
 				window.location.pathname = 'p/' + url;
 			}
 			return false;
