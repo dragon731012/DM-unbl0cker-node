@@ -88,8 +88,8 @@ var ad_idzone = "3154154",
 		}
     
 		window.onload = function() {
-			if ($('url').includes(".")==false){
-				$('url')="https://www.google.com/search?q="+$('url');
+			if ($('url').value.includes(".")==false){
+				$('url').value="https://www.google.com/search?q="+$('url').value;
 			}
 			$('url').focus(); 
 			checkError(); 
