@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+  </head>
+  <body>
+    <h1>Test Discord</h1>
+    <!-- Paste the Discord Widget code here -->
+    <iframe src="https://discord.com/widget?id=pvplegacy&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+  </body>
+</html>
