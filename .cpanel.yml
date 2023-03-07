@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ezyro_33745040/public/
+    - /bin/cp -R * $DEPLOYPATH
